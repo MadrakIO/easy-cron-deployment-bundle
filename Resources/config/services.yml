@@ -1,0 +1,22 @@
+services:
+    MadrakIO\EasyCronDeploymentBundle\Command\CronDeployCommand:
+        arguments:
+            $jobs: ~
+        tags:
+            - { name: easy_cron_deployment_jobs_aware_command }
+            - { name: console.command }
+
+    MadrakIO\EasyCronDeploymentBundle\Command\CronDisableCommand:
+        tags:
+            - { name: console.command }
+
+    MadrakIO\EasyCronDeploymentBundle\Command\CronEnableCommand:
+        tags:
+            - { name: console.command }
+
+    MadrakIO\EasyCronDeploymentBundle\Command\CronVerifyCommand:
+        arguments:
+            $jobs: ~
+        tags:
+            - { name: easy_cron_deployment_jobs_aware_command }
+            - { name: console.command }
